@@ -1,0 +1,137 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Power Hour - Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="overlay"></div>
+
+    <!-- Popup -->
+    <div id="popup">
+        <h2>Welcome to Power Hour's Coaching page 🎉</h2>
+        <p>Have a nice BOMBO Day.</p>
+        <button class="popup-button" onclick="closePopup()">OUI OUI BAGUETTE !</button>
+    </div>
+  <header>
+    <h1>Pwr Hour - #1 - Beta Website : V 1.3.1</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Songs_Muscles.html">Songs & Muscle Groups</a></li>
+        <li><a href="NoEquip.html">Exercises without equipment</a></li>
+        <li><a href="Weights.html">Exercises with weights</a></li>
+        <li><a href="requests.html">Requests and feedbacks</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="news">
+        <p> Feel free to give feedbacks, bugs and ideas to us (@mateo.vitalone) : <a href="requests.html">Requests</a> </p>
+        
+        
+        <!-- Conteneur parent des deux carousels -->
+        <div class="carousel-wrapper">
+          
+          <!-- Premier Carousel -->
+          <div class="carousel-container">
+            <button class="prev">&#10094;</button>
+            <div class="carousel"></div> <!-- Les images seront ajoutées ici par JS -->
+            <button class="next">&#10095;</button>
+          </div>
+      
+          <!-- Deuxième Carousel -->
+          <div class="carousel-container">
+            <button class="prev">&#10094;</button>
+            <div class="carousel"></div> <!-- Les images seront ajoutées ici par JS -->
+            <button class="next">&#10095;</button>
+          </div>
+    
+          <!-- Troisième Carousel -->
+          <div class="carousel-container">
+            <button class="prev">&#10094;</button>
+            <div class="carousel"></div> <!-- Les images seront ajoutées ici par JS -->
+            <button class="next">&#10095;</button>
+          </div>
+        </div>
+    </section>
+    
+ 
+<!-- Team Members Section -->
+<section id="routine">
+    <h2>Standard Routine</h2>
+    <table>
+        <thead>
+            <tr>
+            <th id = "r5">Order of Execution ↓</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+            <td id = "r4">Warming up - Arms </td>
+            </tr>
+            <tr>
+            <td id = "r4">Warming up - Legs</td>
+            </tr>
+            <tr>
+            <td id = "r4">
+                Warming up - Core<br>
+                &nbsp;&nbsp;Activation & stabilisation<br>
+                &nbsp;&nbsp;Deep core muscles: transversus abdominis, multifidus & pelvic floor
+            </td>
+            </tr>
+            <tr>
+            <td id = "r4">Legs - Quads & glutes</td>
+            </tr>
+            <tr>
+            <td id = "r4">Arms - Chest & triceps</td>
+            </tr>
+            <tr>
+            <td id = "r4">
+                Core<br>
+                &nbsp;&nbsp;Anti-movement & bracing<br>
+                &nbsp;&nbsp;Upper core: obliques, rectus abdominis, erector spinae
+            </td>
+            </tr>
+            <tr>
+            <td id = "r4">Legs - Hamstrings and/or glutes</td>
+            </tr>
+            <tr>
+            <td id = "r4">Arms - Upper back or shoulders & biceps</td>
+            </tr>
+            <tr>
+            <td id = "r4">
+                Core<br>
+                &nbsp;&nbsp;Dynamic & loaded work<br>
+                &nbsp;&nbsp;Obliques & rotational core
+            </td>
+            </tr>
+            <tr>
+            <td id = "r4">Legs - Power & explosiveness</td>
+            </tr>
+            <tr>
+            <td id = "r4">
+                AMRAP<br>
+                &nbsp;&nbsp;3 different exercises targeting legs, upper body and core or full body strength<br>
+                &nbsp;&nbsp;A combination of endurance and cardio
+            </td>
+            </tr>
+            <tr>
+            <td id = "r4">Cooling down</td>
+            </tr>
+        </tbody>
+    </table>
+  </section>
+  
+
+  <footer id="footer">
+    Created and maintained by Matéo Vitalone - 2025
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
