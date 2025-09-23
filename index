@@ -1,5 +1,8 @@
 
 <html lang="en">
+
+
+<!-- path : C:\Users\Matéo\OneDrive\Documents\GitHub\PwrHr-->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,10 +23,12 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
+        <!--
         <li><a href="Songs_Muscles.html">Songs & Muscle Groups</a></li>
         <li><a href="NoEquip.html">Exercises without equipment</a></li>
         <li><a href="Weights.html">Exercises with weights</a></li>
         <li><a href="requests.html">Requests and feedbacks</a></li>
+        -->
       </ul>
     </nav>
   </header>
