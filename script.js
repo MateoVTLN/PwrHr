@@ -1,111 +1,104 @@
-
 const imageList = [
-    "https://risibank.fr/cache/medias/0/7/761/76116/thumb.gif",
-     "https://risibank.fr/cache/medias/0/0/48/4884/thumb.gif",
-      "https://risibank.fr/cache/medias/0/0/43/4305/thumb.gif",
-      "IMG/504866395_17862903453424537_5707323360489069803_n.jpg",
-      "IMG/510431307_17862903486424537_1265314599165967404_n.jpg",
-      "IMG/510963800_17862903477424537_1843944005459151719_n.jpg",
-      "IMG/AQMD__hY61mkr7hASF-PIiIka-Q_sO9NbELI0Mx7XYPqA_tLs0u1_pROgZmqukKNt-_7ED70vkPvrcvM_aYEr-EzZ6mOr9CjyaeXu10.mp4",
-      "IMG/AQMK7rLXlN3Ln-VCAYuEDb5j-00aL7wEmUv2DZLHR2qWeRAXgJrhk51CamX1KWlECioEHrFYRUrvfojseYwIP9PGZMcZm0PUMpMC87c.mp4",
-      "IMG/AQMkotmzaJA9mFsQkOC2kquGzii9G_2-XRMJ4y-BH8T2YW7J9qF8uq626P-2pZIzqseVxA-T_e2SY9cIsntSeFFd.mp4",
-      "IMG/AQN27oNQ2FXmdFYgXP4CIf9yJHGgnVp5CbqJ9hsjFfMamgMRCqNE44exwYMh-NchDjvyl-bXllI9iVxG6LwHB69wDDUvzhg0TL2eqjc.mp4",
-      "IMG/AQNDLLL9ru_O9Cs1n4Iho4dWdzHngFjxeDyT-YNJZPXKl-Xg8aW-KdDLKbMTb5qTZ7ykf6UW_Li0jkqkp7UfgIm5.mp4",
-      "IMG/AQNM5SkWZ5yTlUHD-n8b6XfwMQO074eUBs2cEODpA6u3Mcb501FByG38jH_l8gbCNz6QbkxglR7PKy3yxsNvTyOe74KZaprI6A2ir0g.mp4",
-      "IMG/AQNqJ-Mg2gTU8S-88l-usZmlVX2YiPvnKZM1hZh4uE_j4fvStIFtrfbxSWBRca04BhJFV3u97mWqZpYzShpymD1Bb61ayHukPDxlc6k.mp4",
-      "IMG/AQNRcrwsblSOiTG1BaZKapty8ZkW2t2bt1NCk8oQGKwGoxYGwdX9i9nMQVqmX8uKI1afrepIJVSVYTWg27htxIAtbTKURTkZcVtLd7s.mp4",
-      "IMG/AQNrMPTKzE7AMV5ZDLTOHY19j_yQ1lsCAYtWLgQb_H39PXz4WEfcLhMVK2aG52N7Eb0_DhWNn-I7SBEn67twNakaEHWf0H9jRhgM23E.mp4",
-      "IMG/AQNtXT_21-ACh9czpKDykGW5kpRiiFuuFM2jCry4sOeohkDen9zFyr-6Em63LGirHN6euw3ntJJGj4gqyMtZb6opi3ggyAICIlrAEwg.mp4",
-      "IMG/AQOKHq27jS7Yfgv46mk2bxMU4Br11FOBL8E1s86BDTpvJsZET-CS7jHJF9yN7w1OSClujY_QQmUSANp0flRukbM46poHlO12SvbS3pc.mp4",
-      "IMG/AQOSKH8Kbvxm3ANOmeWufJ10WjWriwJDm1_hwg_NKtYPmdY_hfSdN9yhO6Ma3XbGoGKBXLqKJYKfhdyvX4FKbPRgCutVLumiimNXyRc.mp4",
-      "IMG/AQOT6EQKBMbNGjeHGw5uv4q3PVTysvDwYPk1WIlJnYGKmakFWNmq2MsGGysFJzXb9ZY_Sva2ib-fogZPAgY8fSRX.mp4",
-      "IMG/AQOxOvokWQQ8DcyHpAflQ-Pvp4USIDxbgS_B8_ltuCUOEAbwO5B91Lcq6gKHUgqZtFDDAuPtrQc8y5LVcdtY2mqNg4GBpEJP2wUvVDc.mp4",
-      "IMG/AQPg--3GZqYoS2S1_jY-wKq7Rgf75-hrIcI9l7maYWHpToMXilcc1iCapd0O4y0cfv3OkkQuOH_d13mH-1KVrg8tnjk9toZgJKCAd1o.mp4",
-      "IMG/AQPg2UCXDwoAevkx1K2EegOhbBgKqCck-OnKi_Iocfj4XhKxOuk0YaRtmMvWaoa-VhJ6MGQLMDq5v7szvVo6sUsPAQC9H3wa4gxEOIs.mp4",
-      "IMG/AQPhoxGvVYNVK713crKcqkWJQCr9AZf3-H5vDwtmFsKDf2wAFuvLoXuADz-L09V1iLeKqm96DZQ6JtZOeYmOJUsCD6B6r_M9bM_LSbA.mp4",
-      "IMG/AQPhnXbSD994Ri-9J0EPinZygkPC-KM241AlsCIc4-x2ocDdSambGcGoP-pkFpFvO8VeYbzKwuOSOmADW-XxSJUSZxksRvVTj-VLzW0.mp4",
-      "IMG/AQPMgpCG6JmhiBZU72EtIazy4DJ-uCixUlogXWrNKUPPzT5U2z84uyXBoVeCCA5ikeVMwK43_AArmRH6ephi1m4ja7X1lzSOLDVqLM4.mp4",
-      "IMG/AQPoxvu4dvHf4sLeVngbV3mVBkovRGXWUDXze0zsFRkwL4ohq30myK1NIjc9YyJxpGGWmlDi4QtFAVRrXAnB750n.mp4",
-      "IMG/AQPYTLim1bTSlAKSJV1vkNkDGH1FATxbe4dwnCUt-qZschA2JQWdxY2VrSc_KOw04HlOE2mWTL1BSwZmIEFYIL2EAAXc8OQqh_aGBDs.mp4",
-      "IMG/AQPzgvfQFFc4CKDBLGqtLO8XFp8o2CgQvjHE-vI8W3zOvvWk0xfNo3BTcrtbhJ6BNc2hDLleOlPB37kgDucC068iynzl0sbjMGUjtG4.mp4"
+    "IMG/504866395_17862903453424537_5707323360489069803_n.jpg",
+    "IMG/510431307_17862903486424537_1265314599165967404_n.jpg",
+    "IMG/510963800_17862903477424537_1843944005459151719_n.jpg",
+    "IMG/Power Mash Up.mp4"
 ];
-      
 
-
-// Fonction pour afficher le popup
+// --- Popup ---
 window.onload = function() {
     document.getElementById("popup").style.display = "block";
     document.getElementById("overlay").style.display = "block";
 };
 
-// Fonction pour fermer le popup
 function closePopup() {
     document.getElementById("popup").style.display = "none";
     document.getElementById("overlay").style.display = "none";
 }
 
-// Fonction pour mélanger un tableau (algorithme de Fisher-Yates)
+// --- Shuffle ---
 function shuffleArray(arr) {
     for (let i = arr.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]]; // Échange les éléments
+        [arr[i], arr[j]] = [arr[j], arr[i]];
     }
     return arr;
 }
 
-// Fonction pour ajouter des images aléatoires à un carrousel
-function addImagesToCarousel(container, numImages = 170) {
-    const shuffledImages = shuffleArray([...imageList]);  // Mélanger les images
-    const images = shuffledImages.slice(0, numImages);     // Sélectionner les premières images après le mélange
+// --- Carousel population ---
+function addMediaToCarousel(container, numItems = 50) {
+    const shuffled = shuffleArray([...imageList]);
+    const items = shuffled.slice(0, numItems);
 
-    images.forEach(imageURL => {
-        const imgElement = document.createElement('img');
-        imgElement.src = imageURL;
-        imgElement.classList.add('carousel-image');
-        container.querySelector('.carousel').appendChild(imgElement);
+    items.forEach(url => {
+        let element;
+        if (url.endsWith(".mp4") || url.endsWith(".webm")) {
+            element = document.createElement("video");
+            element.src = url;
+            element.autoplay = false;   // autoplay handled by code
+            element.loop = false;       // no loop, we want to move on
+            element.muted = true;
+            element.playsInline = true;
+            element.classList.add("carousel-video");
+        } else {
+            element = document.createElement("img");
+            element.src = url;
+            element.classList.add("carousel-image");
+        }
+        container.querySelector(".carousel").appendChild(element);
     });
 }
 
-// Appliquer le mélange d'images aux carrousels
-document.querySelectorAll('.carousel-container').forEach((container) => {
-    addImagesToCarousel(container); // Ajouter des images aléatoires au carrousel
+// --- Carousel behavior ---
+document.querySelectorAll(".carousel-container").forEach((container) => {
+    addMediaToCarousel(container);
 
-    let images = container.querySelectorAll('.carousel-image');
+    let mediaItems = container.querySelectorAll(".carousel img, .carousel video");
     let currentIndex = 0;
-    let totalImages = images.length;
-  
-    if (totalImages === 0) {
-        console.error('Aucune image trouvée pour le carousel.');
+    let total = mediaItems.length;
+
+    if (total === 0) {
+        console.error("No media found for carousel.");
         return;
     }
-  
-    // Affiche la première image au chargement
-    images[currentIndex].classList.add('active');
-  
-    function showImage(index) {
-        images.forEach((img, i) => {
-            img.classList.remove('active');
+
+    function showItem(index) {
+        mediaItems.forEach((el, i) => {
+            el.classList.remove("active");
             if (i === index) {
-                img.classList.add('active');
-                console.log(`Affichage de l'image : ${img.src}`);
+                el.classList.add("active");
+                console.log(`Showing: ${el.tagName} - ${el.getAttribute("src")}`);
+
+                if (el.tagName === "VIDEO") {
+                    el.currentTime = 0;
+                    el.play().catch(err => console.warn("Autoplay prevented:", err));
+                    // when video ends → move to next
+                    el.onended = () => {
+                        nextItem();
+                    };
+                } else {
+                    // for images → auto switch after 5s
+                    setTimeout(() => {
+                        nextItem();
+                    }, 5000);
+                }
             }
         });
     }
-  
-    // Navigation avec les boutons
-    container.querySelector('.next').addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % totalImages;
-        showImage(currentIndex);
-    });
-  
-    container.querySelector('.prev').addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-        showImage(currentIndex);
-    });
-  
-    // Défilement automatique toutes les 5 secondes
-    setInterval(() => {
-        currentIndex = (currentIndex + 1) % totalImages;
-        showImage(currentIndex);
-    }, 5000);
+
+    function nextItem() {
+        currentIndex = (currentIndex + 1) % total;
+        showItem(currentIndex);
+    }
+
+    function prevItem() {
+        currentIndex = (currentIndex - 1 + total) % total;
+        showItem(currentIndex);
+    }
+
+    container.querySelector(".next").addEventListener("click", nextItem);
+    container.querySelector(".prev").addEventListener("click", prevItem);
+
+    // Start carousel
+    showItem(currentIndex);
 });
