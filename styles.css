@@ -1,262 +1,353 @@
+:root {
+  /* Palette */
+  --color-bg: #efeee7;
+  --surface: #ffffff;
+  --text: #0b2239;
+  --muted: #6b7a90;
+  --brand: #ff6663;           /* brand1 */
+  --brand-contrast: #071b26;  /* testo su brand chiaro */
+  --accent: #e0ff4f;    
+  --accent2: #d7f25d;     /* brand2 */
+  --neutral-100: #f0f3f6;     /* neutral */
+  --neutral-200: #dee4e8;     /* neutral2 */
+  --border: #d0d7de;
 
-/* css/styles.css */
+  /* Spazi e raggi */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --radius-1: 8px;
+  --radius-2: 12px;
+  --radius-3: 20px;
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-  }
-  
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1em 0;
-    text-align: center;
-  }
-  
-nav ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-  }
-  
-nav ul li a, select {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-h1 {
-    background-color: #333;
-    color: #fff;
-    padding: 1em 0;
-    text-align: center;
-  }
+  /* Ombre */
+  --shadow-1: 0 1px 2px rgba(0,0,0,0.08);
+  --shadow-2: 0 4px 8px rgba(0,0,0,0.10);
+  --shadow-3: 0 8px 24px rgba(0,0,0,0.12);
 
-h2 {
-    background-color: #333;
-    color: #fff;
-    padding: 1em 1em;
-    text-align: center;
-  }
-main {
-    padding: 20px;
-  }
-  /*#######################   CAROUSEL IMAGES ACCEUIL     ##############################*/
-  
-  /* Conteneur parent pour placer les carousels en ligne */
-  /* Conteneur principal pour aligner les carrousels */
-.carousel-wrapper {
-      display: flex;
-      justify-content: center;
-      margin: 20px 0;
-  }
-  
-  /* Style des conteneurs individuels des carrousels */
-  /* Conteneur de chaque carousel */
-.carousel-container {
-    width: 100%;
-    height: 750px; /* Hauteur fixe */
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    margin: 0 auto;
-    position: relative;
-    display: flex;              /* Ajout */
-    justify-content: center;    /* Centre horizontalement */
-    align-items: center;        /* Centre verticalement */
+  /* Tipografia fluida */
+  --fs-base: clamp(14px, 1.2vw, 18px);
+  --fs-h1: clamp(28px, 6vw, 48px);
+  --fs-h2: clamp(18px, 3.2vw, 28px);
+  --fs-nav: clamp(14px, 1.6vw, 18px);
+
+  /* Larghezze fluide */
+  --container-max: 1200px;
 }
 
-/* Images et vidéos */
+/* Base */
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.5;
+  font-size: var(--fs-base);
+}
+
+header {
+  background: var(--accent);
+  color: #000;
+  padding: var(--space-1) 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 var(--space-4);
+  display: flex;
+  gap: var(--space-2);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  font-size: var(--fs-nav);
+  font-weight: 600;
+  background: var(--accent1);
+  border-radius: 20px;
+  padding: var(--space-1) var(--space-3);
+  box-shadow: var(--shadow-1);
+}
+
+nav ul li a, select {
+  color: #000;
+  text-decoration: none;
+}
+
+main {
+  padding: clamp(var(--space-3), 3vw, var(--space-6));
+  margin-inline: auto;
+  max-width: var(--container-max);
+}
+
+/* Titoli fluidi */
+h1 {
+  background: var(--accent);
+  color: #000;
+  padding: var(--space-2) 0;
+  text-align: center;
+  border-radius: var(--radius-1);
+  box-shadow: var(--shadow-2);
+  font-size: var(--fs-h1);
+  margin: var(--space-6) 0 var(--space-3);
+}
+
+h2 {
+  background: var(--accent);
+  color: var(--brand-contrast);
+  border-radius: var(--radius-2);
+  padding: var(--space-2) var(--space-4);
+  text-align: center;
+  width: fit-content;
+  margin: var(--space-6) auto var(--space-3);
+  box-shadow: var(--shadow-1);
+  font-weight: 600;
+  font-size: var(--fs-h2);
+}
+
+/* Carousel responsivo */
+.carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: var(--space-6) 0;
+  padding-inline: var(--space-3);
+}
+
+.carousel-container {
+  width: min(var(--container-max), 100%);
+  height: clamp(300px, 60vh, 680px);
+  background: var(--surface);
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-3);
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
 .carousel-image,
 .carousel-video {
-    opacity: 0.9;
-    max-width: 100%;    /* Ne dépasse jamais en largeur */
-    max-height: 100%;   /* Ne dépasse jamais en hauteur */
-    object-fit: contain; /* Contenu entièrement visible et centré */
-    display: none;
-    z-index: 1;
+  opacity: 1;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: none;
+  z-index: 1;
+  transition: opacity 220ms ease;
 }
 
 .carousel-image.active,
 .carousel-video.active {
-    display: block;
+  display: block;
+  opacity: 1;
 }
-  
-  /* Style des boutons de navigation */
+
+/* Overlay opzionale per contrasto */
+.carousel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.35), rgba(0,0,0,0.05));
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Logo leggibile */
+.carousel-logo {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(120px, 40%, 420px);
+  opacity: 0.9;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.25));
+  pointer-events: none;
+  z-index: 3;
+}
+
 button.prev,
 button.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  border: 0;
+  padding: var(--space-2);
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: 999px;
   font-size: 18px;
-  z-index: 1000;   /* Make sure buttons are on top */
+  z-index: 4;
+  width: clamp(36px, 5.5vw, 44px);
+  height: clamp(36px, 5.5vw, 44px);
+  display: grid;
+  place-items: center;
+  transition: background 150ms ease, transform 150ms ease;
 }
-  
-button.prev {
-      left: 10px;
-      z-index: 1000;
-  }
-  
-button.next {
-      right: 10px;
-      z-index: 1000;
-  }
-  
+
+button.prev { left: var(--space-4); }
+button.next { right: var(--space-4); }
+
 button.prev:hover, button.next:hover {
-      background-color: rgba(0, 0, 0, 0.8); /* Assombrit au survol */
-  }
-  
-.carousel-logo {
-    position: absolute;       /* Superposition sur le carousel */
-    top: 50%;                 /* Centre verticalement */
-    left: 50%;                /* Centre horizontalement */
-    transform: translate(-50%, -50%); /* Centre exact */
-    width: 50%;               /* Ajuste la taille du logo */
-    opacity: 0.5;             /* Semi-transparence */
-    pointer-events: none;     /* Permet de cliquer à travers le logo */
-    z-index: 10;              /* Au-dessus des images/vidéos */
+  background: rgba(0, 0, 0, 0.75);
+  transform: translateY(-50%) scale(1.05);
 }
 
-
-  /*#####################################################*/
-  /*#######################   TABLEAU     ##############################*/
-  
+/* Tabelle moderne e responsive */
 .table-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2% 0;                   /* 2% de marge en haut et en bas */
-    width: 100%;                    /* Le conteneur prend toute la largeur disponible */
-  }
-  
-table {
-    border-collapse: collapse;
-    width: 100%;                     
-    background-color: #f9f9f9;
-    box-shadow: 0 2% 4% rgba(0, 0, 0, 0.1);  
-    margin: 0 auto; /* Centre la table horizontalement */
+  width: 100%;
+  overflow-x: auto;
+  margin: var(--space-6) auto;
+  display: block;
+  padding: 0 var(--space-3) var(--space-2);
 }
 
-  
-th, td {
-      border: 0.1em solid #ddd;       /* Bordure fine en unités relatives */
-      padding: 1em 2em;               /* Espacement interne : 1em en haut/bas, 2em à gauche/droite */
-      text-align: center;
-  }
+table {
+  width: min(100%, 900px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-2);
+  background: var(--surface);
+  box-shadow: var(--shadow-2);
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0 auto;
+}
 
 thead th {
-    position: sticky;
-    top: 0;
-    background-color: #4CAF50; /* Couleur de fond pour garder la lisibilité */
-    color: white;
-    z-index: 10; /* Pour s’assurer que l’en-tête reste au-dessus du contenu */
+  position: sticky;
+  top: 0;
+  background: var(--neutral-100);
+  color: var(--text);
+  z-index: 1;
+  text-align: left;
 }
 
-  
-th {
-      background-color: #4CAF50;
-      color: white;
-      font-weight: bold;
+th, td {
+  border-bottom: 1px solid var(--border);
+  padding: clamp(8px, 1.6vw, 14px) clamp(10px, 2.4vw, 18px);
+  text-align: left;
+  white-space: nowrap;
+}
+
+th:first-child { border-top-left-radius: var(--radius-2); }
+th:last-child  { border-top-right-radius: var(--radius-2); }
+
+tbody tr:last-child td:first-child { border-bottom-left-radius: var(--radius-2); }
+tbody tr:last-child td:last-child  { border-bottom-right-radius: var(--radius-2); }
+
+tbody tr:nth-child(even) { background: var(--neutral-100); }
+tbody tr:nth-child(odd)  { background: #fff; }
+
+/* Stack “card” sotto 640px: aggiungi data-label su td in HTML */
+@media (max-width: 640px) {
+  table.responsive-card {
+    border: 0;
   }
-  
-tr:nth-child(even) {
-      background-color: #c7c7c7;      /* Lignes alternées */
+  table.responsive-card thead {
+    position: absolute;
+    left: -9999em;
+    top: -9999em;
   }
-  
-#big_img_wide { 
-    width: 55%;   
-    height: auto;
+  table.responsive-card,
+  table.responsive-card tbody,
+  table.responsive-card tr,
+  table.responsive-card td {
     display: block;
-    margin: auto;
-    background-color: rgb(13, 58, 58);
-    padding: 5%;  /* Pour voir la couleur autour de l'image */
-    border: 10% solid rgb(13, 58, 58);
+    width: 100%;
+  }
+  table.responsive-card tr + tr {
+    margin-top: var(--space-3);
+  }
+  table.responsive-card tr {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-1);
+    box-shadow: var(--shadow-1);
+    padding: var(--space-2) var(--space-3);
+  }
+  table.responsive-card td {
+    border: 0;
+    border-bottom: 1px solid var(--border);
+    padding: var(--space-2) 0 var(--space-2) 50%;
+    position: relative;
+    white-space: normal;
+  }
+  table.responsive-card td:last-child {
+    border-bottom: 0;
+  }
+  table.responsive-card td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: var(--space-1);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45%;
+    font-weight: 700;
+    color: var(--muted);
+  }
 }
 
-#dayo {color: #200096; font-weight: bold; background-color: #a1c406;}/**/
-#daye {color: #200096; font-weight: bold; background-color: #e6bb46;}/**/
-#red_text {color: #b80000; font-weight: bold;}
-#purple_text {color: #a200b8;font-weight: bold;}
-#blue_text {color: #0658c4;font-weight: bold;}
-#green_text {color: #00b41e;font-weight: bold;}
-#bk_text {color: #000000;font-weight: bold;}
-  
-  
-@media (max-width: 768px) {
-      table {
-          width: 95%;                /* Sur les écrans étroits (mobiles/tablettes), le tableau prend 95% de la largeur */
-      }
-  
-      th, td {
-          padding: 0.8em 1em;        /* Réduit légèrement le padding pour les petits écrans */
-      }
-  }
-  /*#####################################################*/
-  
-  
+/* Badge/toni dimostrativi */
+#red_text   { color: var(--text); background: var(--accent); font-weight: 600; }
+#purple_text{ color: var(--brand); font-weight: 600; }
+#blue_text  { color: #147af3; font-weight: 600; }
+#green_text { color: #00b41e; font-weight: 600; }
+#bk_text    { color: #000; font-weight: 600; }
+
+/* Footer */
 #footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    text-shadow: #000;
-    padding: 10px 0;
-    font-size: 14px;
-    z-index: 1;
-    opacity: 0.5;
-  }
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: var(--space-2) 0;
+  font-size: 14px;
+  z-index: 5;
+  opacity: 0.85;
+  backdrop-filter: saturate(140%) blur(2px);
+}
 
-  /*#####################################################*/
-
-
-    /* Style du popup */
+/* Popup */
 #popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgb(199, 199, 199);
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    text-align: center;
-    display: none; /* Caché par défaut */
-    z-index: 1000;
-    }
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--surface);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-3);
+  border-radius: var(--radius-2);
+  text-align: center;
+  display: none;
+  z-index: 10;
+}
 
-    /* Fond assombri */
-  #overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color:  rgb(13, 58, 58);
-    display: none;
-    z-index: 999;
-    opacity: 0.89;
-    }
+#overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(11, 34, 57, 0.75);
+  display: none;
+  z-index: 9;
+}
 
-    /* Bouton */
-  .popup-button {
-    background-color: #4690cc;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    }
+.popup-button {
+  background: #4690cc;
+  color: white;
+  border: none;
+  padding: var(--space-2) var(--space-4);
+  cursor: pointer;
+  border-radius: var(--radius-1);
+  box-shadow: var(--shadow-1);
+}
+
+/* Accessibilità: riduci animazioni se richiesto */
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
