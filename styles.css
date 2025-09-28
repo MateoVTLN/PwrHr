@@ -96,10 +96,17 @@ h1 {
   box-shadow: var(--shadow-2);
   font-size: var(--fs-h1);
   margin: var(--space-6) 0 var(--space-3);
+  font-family: 'Seven Segment', sans-serif;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* spacing between clocks and title */
+                                                
 }
 
 h2 {
-  background: var(--accent);
+  background: var(--brand);
   color: var(--brand-contrast);
   border-radius: var(--radius-2);
   padding: var(--space-2) var(--space-4);
@@ -109,6 +116,35 @@ h2 {
   box-shadow: var(--shadow-1);
   font-weight: 600;
   font-size: var(--fs-h2);
+}
+h3 {
+  background: var(--brand);
+  color: var(--brand-contrast);
+  border-radius: var(--radius-2);
+  padding: var(--space-2) var(--space-4);
+  text-align: center;
+  width: fit-content;
+  margin: var(--space-6) auto var(--space-3);
+  box-shadow: var(--shadow-1);
+  font-weight: 300;
+  font-size: var(--fs-base);
+}
+
+.clock {
+  background: var(--accent);
+  color: #000;
+  padding: var(--space-2) 0;
+  border-radius: var(--radius-1);
+  font-size: var(--fs-h1);
+  margin: var(--space-6) 0 var(--space-3);
+  font-family: 'Seven Segment', monospace;
+  font-weight: 300;
+  display: inline-block;
+
+  /* 👇 fixes */
+  width: 5ch;              /* exactly enough space for "59:59" (5 characters) */
+  text-align: center;
+  font-variant-numeric: tabular-nums; /* align all digits equally */
 }
 
 /* Carousel responsivo */
@@ -199,12 +235,40 @@ button.prev:hover, button.next:hover {
 }
 
 /* Tabelle moderne e responsive */
-.table-container {
+
+.warmup-rows tr:first-child {
+  position: relative; /* allows pseudo-element to be positioned */
+}
+
+.warmup-rows tr:first-child::after {
+  content: "⇅";
+  position: absolute;
+  left: 50%;
+  bottom: 0;           /* bottom border of first row */
+  transform: translate(-50%, 50%); /* center on the border */
+  font-size: 20px;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.swap-arrow {
+  position: absolute;
+  left: 50%;
+  top: 100%; /* bottom of warmup-rows */
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.routine-container {
+  position: relative;
+  display: inline-block;
   width: 100%;
   overflow-x: auto;
   margin: var(--space-6) auto;
-  display: block;
   padding: 0 var(--space-3) var(--space-2);
+  
 }
 
 table {
@@ -294,7 +358,7 @@ tbody tr:nth-child(odd)  { background: #fff; }
 
 /* Badge/toni dimostrativi */
 #red_text   { color: var(--text); background: var(--accent); font-weight: 600; }
-#purple_text{ color: var(--brand); font-weight: 600; }
+#orange_text{ color: var(--brand); font-weight: 600; }
 #blue_text  { color: #147af3; font-weight: 600; }
 #green_text { color: #00b41e; font-weight: 600; }
 #bk_text    { color: #000; font-weight: 600; }

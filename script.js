@@ -25,6 +25,29 @@ function shuffleArray(arr) {
     return arr;
 }
 
+function startFastClock(elementId) {
+    const el = document.getElementById(elementId);
+    let secondsPassed = 0;
+    const totalSeconds = 3600; // 0 → 59:59 = 3600 seconds
+    const duration = 3000;     // 6 seconds total
+    const interval = duration / totalSeconds; // ≈ 1.67 ms per tick
+
+    const timer = setInterval(() => {
+        if (secondsPassed >= totalSeconds) {
+            secondsPassed = 0; // restart after reaching 59:59
+        }
+        const minutes = Math.floor(secondsPassed / 60);
+        const seconds = secondsPassed % 60;
+        el.textContent =
+            String(minutes).padStart(2, "0") + ":" + String(seconds).padStart(2, "0");
+        secondsPassed++;
+    }, interval);
+}
+
+// Launch both clocks
+startFastClock("clock-left");
+startFastClock("clock-right");
+
 // --- Carousel population ---
 function addMediaToCarousel(container, numItems = 50) {
     const shuffled = shuffleArray([...imageList]);

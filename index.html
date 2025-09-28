@@ -21,7 +21,11 @@
         <button class="popup-button" onclick="closePopup()"> Go !</button>
     </div>
   <header>
-    <h1>Pwr Hour</h1>
+    <h1>
+      <span id="clock-left" class="clock"></span>
+      -- Power Hour --
+      <span id="clock-right" class="clock"></span>
+</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -36,7 +40,7 @@
 
   <main>
     <section id="news">
-        <h2> Feel free to give feedbacks, bugs and ideas to us (@mateo.vitalone | @berfinnkahraman_) : <a href="requests.html">Requests</a> </h2>      
+        <h3> Feel free to give feedbacks, bugs and ideas to us via <a href="requests.html">Requests</a> </h3>      
         <!-- Conteneur parent des deux carousels -->
         <div class="carousel-wrapper">
             <div class="carousel-container">
@@ -48,73 +52,81 @@
         </div>
     </section>
     
- 
-<!-- Team Members Section -->
+<!-- Routine Table -->
+<!-- Routine Table -->
 <section id="routine">
-    <h2>Standard Routine</h2>
-    <table class="routine-table">
-        <thead>
-            <tr>
-            <th id = "red_text">Order of Execution ↓</th>
-            </tr>
-        </thead>
+  <h2>Standard Routine</h2>
+  <div class="routine-container">
+  <table class="routine-table">
+    <thead>
+      <tr>
+        <th id="red_text">Order of Execution ↓</th>
+      </tr>
+    </thead>
 
-        <tbody>
-            <tr>
-            <td id = "orange_text">Warming up - Arms </td>
-            </tr>
-            <tr>
-            <td id = "purple_text">Warming up - Legs</td>
-            </tr>
-            <tr>
-            <td id = "r4">
-                Warming up - Core<br>
-                &nbsp;&nbsp;Activation & stabilisation<br>
-                &nbsp;&nbsp;Deep core muscles: transversus abdominis, multifidus & pelvic floor
-            </td>
-            </tr>
-            <tr>
-            <td id = "r4">Legs - Quads & glutes</td>
-            </tr>
-            <tr>
-            <td id = "r4">Arms - Chest & triceps</td>
-            </tr>
-            <tr>
-            <td id = "r4">
-                Core<br>
-                &nbsp;&nbsp;Anti-movement & bracing<br>
-                &nbsp;&nbsp;Upper core: obliques, rectus abdominis, erector spinae
-            </td>
-            </tr>
-            <tr>
-            <td id = "r4">Legs - Hamstrings and/or glutes</td>
-            </tr>
-            <tr>
-            <td id = "r4">Arms - Upper back or shoulders & biceps</td>
-            </tr>
-            <tr>
-            <td id = "r4">
-                Core<br>
-                &nbsp;&nbsp;Dynamic & loaded work<br>
-                &nbsp;&nbsp;Obliques & rotational core
-            </td>
-            </tr>
-            <tr>
-            <td id = "r4">Legs - Power & explosiveness</td>
-            </tr>
-            <tr>
-            <td id = "r4">
-                AMRAP<br>
-                &nbsp;&nbsp;3 different exercises targeting legs, upper body and core or full body strength<br>
-                &nbsp;&nbsp;A combination of endurance and cardio
-            </td>
-            </tr>
-            <tr>
-            <td class="last-td" id = "r4">Cooling down</td>
-            </tr>
-        </tbody>
-    </table>
-  </section>
+    <!-- Wrap the two warm-up rows -->
+    <tbody class="warmup-rows">
+      <tr>
+        <td id="orange_text">Warming up - Arms</td>
+      </tr>
+      <tr>
+        <td id="orange_text">Warming up - Legs</td>
+      </tr>
+    </tbody>
+    <tbody>
+      <tr>
+
+        <td id="r4">
+          Warming up - Core<br>
+          &nbsp;&nbsp;Activation & stabilisation<br>
+          &nbsp;&nbsp;Deep core muscles: transversus abdominis, multifidus & pelvic floor
+        </td>
+      </tr>
+      <tr>
+        <td id="r4">Legs - Quads & glutes</td>
+      </tr>
+      <tr>
+        <td id="r4">Arms - Chest & triceps</td>
+      </tr>
+      <tr>
+        <td id="r4">
+          Core<br>
+          &nbsp;&nbsp;Anti-movement & bracing<br>
+          &nbsp;&nbsp;Upper core: obliques, rectus abdominis, erector spinae
+        </td>
+      </tr>
+      <tr>
+        <td id="r4">Legs - Hamstrings and/or glutes</td>
+      </tr>
+      <tr>
+        <td id="r4">Arms - Upper back or shoulders & biceps</td>
+      </tr>
+      <tr>
+        <td id="r4">
+          Core<br>
+          &nbsp;&nbsp;Dynamic & loaded work<br>
+          &nbsp;&nbsp;Obliques & rotational core
+        </td>
+      </tr>
+      <tr>
+        <td id="r4">Legs - Power & explosiveness</td>
+      </tr>
+      <tr>
+        <td id="r4">
+          AMRAP<br>
+          &nbsp;&nbsp;3 different exercises targeting legs, upper body and core or full body strength<br>
+          &nbsp;&nbsp;A combination of endurance and cardio
+        </td>
+      </tr>
+      <tr>
+        <td class="last-td" id="r4">Cooling down</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+
   </main>
   <footer id="footer">
     Created and maintained by Matéo Vitalone - 2025
